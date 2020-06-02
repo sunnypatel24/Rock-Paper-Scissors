@@ -1,4 +1,7 @@
 const MAX = 3;
+    const ROCK = document.getElementById("rock").addEventListener("click", rockButtonPress);
+    const PAPER = document.getElementById("paper").addEventListener("click", paperButtonPress);
+    const SCISSORS = document.getElementById("scissors").addEventListener("click", scissorsButtonPress);
 
 function computerPlay() {
     let computerChoice = Math.floor(Math.random() * Math.floor(MAX));
@@ -34,11 +37,25 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
-function game() {
-    for (let i = 0; i < 5; i++) {
-        let computerSelection = computerPlay();
-        let playerSelection = prompt("Rock, Paper, or Scissors?");
-        let result = playRound(playerSelection, computerSelection);
-        console.log(result);
-    }
+function rockButtonPress() {
+    let computerSelection = computerPlay();
+    let playerSelection = "ROCK";
+    let result = playRound(playerSelection, computerSelection);
+    console.log(result);
+}
+
+
+function paperButtonPress() {
+    let computerSelection = computerPlay();
+    let playerSelection = "PAPER";
+    let result = playRound(playerSelection, computerSelection);
+    console.log(result);
+}
+
+
+function scissorsButtonPress() {
+    let computerSelection = computerPlay();
+    let playerSelection = "SCISSORS";
+    let result = playRound(playerSelection, computerSelection);
+    console.log(result);
 }
